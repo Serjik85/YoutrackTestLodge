@@ -27,33 +27,4 @@ function getIssueId() {
     xhr.send();
 
 
-    // const proxyurl = "https://cors-anywhere.herokuapp.com/";
-    const urlId = 'https://merehead.myjetbrains.com/youtrack/rest/issue/2-24396'
-    //let token = 'perm:U2VyZ2V5X1RrYWNoZW5rbw==.NjAtMQ==.gONDyolCZrgbnHVP6UAekE85Nbxpm2';
-
-
-    let xhrId = new XMLHttpRequest();
-    xhrId.open('GET', proxyurl + urlId, true);
-    xhrId.responseType = 'json';
-    xhrId.setRequestHeader('Authorization', 'Bearer ' + token);
-    xhrId.setRequestHeader('Content-Type', 'text/xml');
-    // xhrId.setRequestHeader('fields', 'id,login,name,email');
-    // xhrId.setRequestHeader('name', '0-85');
-
-    xhrId.onreadystatechange = function () {
-        if (xhrId.readyState != 4) {
-            return
-        }
-        parser = new DOMParser();
-        // let xmlDoc = parser.parseFromString(text, "text/xml");
-        let xmlStr = xhrId.response
-        xmlDoc = parser.parseFromString(xmlStr, 'text/xml')
-        console.log(xmlDoc.getElementByTagName('name')[0]);
-        //return jsonsId
-    }
-    xhrId.send();
-
 }
-
-getIssueId()
-//console.log(jsons)
