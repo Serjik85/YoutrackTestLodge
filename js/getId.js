@@ -16,8 +16,9 @@ let url = 'https://merehead.myjetbrains.com/youtrack/api/issues/?query=Board%20T
         let result = await response.json();
         for (let i = 0; i <= result.length; i++)
             console.log(result[i].id);
-
+        id = result[i].id
+        let urlIssue = 'https://merehead.myjetbrains.com/youtrack/api/issues/' + id + '?fields=summary,description';
     } catch (err) {
-        //  console.error(err);
+        //console.error(err);
     }
 })();
