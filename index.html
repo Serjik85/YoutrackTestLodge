@@ -8,12 +8,20 @@
 </head>
 <script src="/js/getId.js"></script>
 <script src='/js/getIssueData.js'></script>
-
+<script src="/js/puzzle.js"></script>
 
 <body>
-    <input type="text" id="in" value="12">
+    <!-- //<input type="text" id="in" value="12"> -->
     <button id="but">Go</button>
-    <textarea id="ar"></textarea>
+    <textarea id="ar" cols="30" rows="10"></textarea>
+    <textarea id="issueData" cols="30" rows="10"></textarea>
+    <select name="myselect" id="task">
+        <!-- <script>
+            let objSel = document.getElementById('task')
+            objSel.options[objSel.options.length] = new Option("текст", "значение");
+        </script> -->
+    </select>
+
 </body>
 
 </html>

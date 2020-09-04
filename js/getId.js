@@ -13,11 +13,20 @@ let url = 'https://merehead.myjetbrains.com/youtrack/api/issues/?query=Board%20T
                 'Authorization': 'Bearer ' + token
             },
         });
+
         let result = await response.json();
-        for (let i = 0; i <= result.length; i++)
+        for (let i = 0; i <= result.length; i++) {
             console.log(result[i].id);
+        }
         id = result[i].id
+        document.getElementById('arr').textContent = (id)
+
         let urlIssue = 'https://merehead.myjetbrains.com/youtrack/api/issues/' + id + '?fields=summary,description';
+
+
+        let objSel = document.getElementById('task')
+        objSel.options[i] = new Option(id);
+
     } catch (err) {
         //console.error(err);
     }

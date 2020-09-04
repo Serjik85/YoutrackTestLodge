@@ -19,6 +19,7 @@ let urlIssue = 'https://merehead.myjetbrains.com/youtrack/api/issues/2-23516?fie
         let resultId = await responseId.json();
         //for (let i = 0; i <= result.length; i++)
         console.log(resultId.description);
+        document.getElementById('issueData').textContent = (resultId.description)
 
     } catch (err) {
         //console.error(err);
