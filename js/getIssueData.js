@@ -23,5 +23,7 @@ let urlIssue = 'https://merehead.myjetbrains.com/youtrack/api/issues/2-23516?fie
 
     } catch (err) {
         //console.error(err);
+
+
     }
 })();

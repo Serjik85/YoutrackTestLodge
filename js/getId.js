@@ -27,6 +27,7 @@ let url = 'https://merehead.myjetbrains.com/youtrack/api/issues/?query=Board%20T
         let objSel = document.getElementById('task')
         objSel.options[i] = new Option(id);
 
+
     } catch (err) {
         //console.error(err);
     }
