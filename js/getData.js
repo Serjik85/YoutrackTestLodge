@@ -4,6 +4,8 @@ let token = 'perm:U2VyZ2V5X1RrYWNoZW5rbw==.NjAtMQ==.gONDyolCZrgbnHVP6UAekE85Nbxp
 let url = 'https://merehead.myjetbrains.com/youtrack/api/issues/?query=Board%20Testamex%20Web:%20%7B3%20sprint%7D%20State:%20%7BNeed%20testing%7D';
 let urlIssue = 'https://merehead.myjetbrains.com/youtrack/api/issues/2-23516?fields=summary,description';
 
+
+// Получаем описание таски
 async function getId() {
     try {
         let response = await fetch(proxyurl + url, {
@@ -33,6 +35,7 @@ async function getId() {
     }
 };
 
+//Получаем id тасок
 async function getData() {
     try {
         let responseId = await fetch(proxyurl + urlIssue, {
